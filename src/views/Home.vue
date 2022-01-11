@@ -1,8 +1,7 @@
 <template>
-  <div>
-    Hello
+  <section>
     <World />
-  </div>
+  </section>
 </template>
 
 <script lang="ts">

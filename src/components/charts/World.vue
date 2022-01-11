@@ -19,11 +19,17 @@ export default {
                     enabled: true,
                 },
                 series: [{
-                    // Use the gb-all map with no data as a basemap
-                    name: 'Basemap',
+                    name: 'France',
                     borderColor: '#A0A0A0',
                     nullColor: 'rgba(200, 200, 200, 0.3)',
                     showInLegend: false
+                }
+                , {
+                    name: 'Separators',
+                    type: 'mapline',
+                    nullColor: '#707070',
+                    showInLegend: false,
+                    enableMouseTracking: false
                 }]
             }
     };
@@ -32,4 +38,8 @@ export default {
 </script>
 
 <style lang="css">
+    .hc {
+        margin-top: 5vh;
+        height: 90vh;
+    }
 </style>

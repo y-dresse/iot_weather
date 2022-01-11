@@ -14,9 +14,14 @@ export default {
                 chart: {
                     map: worldMap,
                 },
-                title: '',
+                title: {
+                    text: ''
+                },
                 mapNavigation: {
                     enabled: true,
+                },
+                tooltip: {
+                    enalble: false
                 },
                 series: [{
                     name: 'France',
@@ -30,6 +35,17 @@ export default {
                     nullColor: '#707070',
                     showInLegend: false,
                     enableMouseTracking: false
+                },
+                {
+                    showInLegend: false,
+                    name: 'Stations',
+                    type:'mappoint',
+                    color: 'red',
+                    data: [{
+                        x: 4200,
+                        y: -7350,
+                        name: 'Paris'
+                    }]
                 }]
             }
     };

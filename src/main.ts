@@ -5,6 +5,7 @@ import router from './router'
 import store from './store'
 import wait from './plugins/wait'
 import './plugins/buefy'
+import './plugins/highcharts'
 
 Vue.config.productionTip = false
 

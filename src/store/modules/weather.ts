@@ -26,6 +26,118 @@ export default {
                     "windDirection": "NORTH",
                     "windDegree": 10,
                     "windSpeed": 10
+                },
+                {
+                    "idMeteo": 1,
+                    "currentTime": "1999-01-08T04:05:06.000+00:00",
+                    "humidity": 10,
+                    "pressure": 10,
+                    "temperature": 10,
+                    "uv": 10,
+                    "cloudCoverage": 10,
+                    "cloudAltitude": 10,
+                    "precipitation": 10,
+                    "windDirection": "NORTH",
+                    "windDegree": 10,
+                    "windSpeed": 10
+                },
+                {
+                    "idMeteo": 1,
+                    "currentTime": "1999-01-08T04:05:06.000+00:00",
+                    "humidity": 10,
+                    "pressure": 10,
+                    "temperature": 10,
+                    "uv": 10,
+                    "cloudCoverage": 10,
+                    "cloudAltitude": 10,
+                    "precipitation": 10,
+                    "windDirection": "NORTH",
+                    "windDegree": 10,
+                    "windSpeed": 10
+                },
+                {
+                    "idMeteo": 1,
+                    "currentTime": "1999-01-08T04:05:06.000+00:00",
+                    "humidity": 10,
+                    "pressure": 10,
+                    "temperature": 10,
+                    "uv": 10,
+                    "cloudCoverage": 10,
+                    "cloudAltitude": 10,
+                    "precipitation": 10,
+                    "windDirection": "NORTH",
+                    "windDegree": 10,
+                    "windSpeed": 10
+                },
+                {
+                    "idMeteo": 1,
+                    "currentTime": "1999-01-08T04:05:06.000+00:00",
+                    "humidity": 10,
+                    "pressure": 10,
+                    "temperature": 10,
+                    "uv": 10,
+                    "cloudCoverage": 10,
+                    "cloudAltitude": 10,
+                    "precipitation": 10,
+                    "windDirection": "NORTH",
+                    "windDegree": 10,
+                    "windSpeed": 10
+                },
+                {
+                    "idMeteo": 1,
+                    "currentTime": "1999-01-08T04:05:06.000+00:00",
+                    "humidity": 10,
+                    "pressure": 10,
+                    "temperature": 10,
+                    "uv": 10,
+                    "cloudCoverage": 10,
+                    "cloudAltitude": 10,
+                    "precipitation": 10,
+                    "windDirection": "NORTH",
+                    "windDegree": 10,
+                    "windSpeed": 10
+                },
+                {
+                    "idMeteo": 1,
+                    "currentTime": "1999-01-08T04:05:06.000+00:00",
+                    "humidity": 10,
+                    "pressure": 10,
+                    "temperature": 10,
+                    "uv": 10,
+                    "cloudCoverage": 10,
+                    "cloudAltitude": 10,
+                    "precipitation": 10,
+                    "windDirection": "NORTH",
+                    "windDegree": 10,
+                    "windSpeed": 10
+                },
+                {
+                    "idMeteo": 1,
+                    "currentTime": "1999-01-08T04:05:06.000+00:00",
+                    "humidity": 10,
+                    "pressure": 10,
+                    "temperature": 10,
+                    "uv": 10,
+                    "cloudCoverage": 10,
+                    "cloudAltitude": 10,
+                    "precipitation": 10,
+                    "windDirection": "NORTH",
+                    "windDegree": 10,
+                    "windSpeed": 10
+                },
+                {
+                    "idMeteo": 1,
+                    "currentTime": "1999-01-08T04:05:06.000+00:00",
+                    "humidity": 10,
+                    "pressure": 10,
+                    "temperature": 10,
+                    "uv": 10,
+                    "cloudCoverage": 10,
+                    "cloudAltitude": 10,
+                    "precipitation": 10,
+                    "windDirection": "NORTH",
+                    "windDegree": 10,
+                    "windSpeed": 10
                 }
             ],
             "position": "position test"
@@ -42,6 +154,7 @@ export default {
     },
     getters: {
         stations : (state: any) => state.stations,
-        current_station: (state: any) => state.current_station
+        current_station: (state: any) => state.current_station,
+        current_weather: (state: any) => state.current_station.meteos[0]
     }
 }

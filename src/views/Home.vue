@@ -3,7 +3,7 @@
     <div class="column is-8">
       <World />
     </div>
-    <div class="column is-4 has-background-primary">
+    <div class="column is-4 box">
       <WeatherAside />
     </div>
   </section>

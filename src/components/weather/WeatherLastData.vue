@@ -1,8 +1,8 @@
 <template>
     <div class="block has-background-grey">
         <h1 class="subtitle">Dernières données météos</h1>
-        <div class="columns" v-for="(weather, index) in current.meteos" :key="index">
-            <div class="column">
+        <div class="columns">
+            <div class="column" v-for="(weather, index) in current.meteos" :key="index">
                 {{weather.temperature}}
             </div>
         </div>
@@ -16,11 +16,13 @@ import { mapGetters } from "vuex";
 @Component({
     computed: {
         ...mapGetters({
-            current: 'weather/current_station'
+            current: 'weather/current_station',
+            weather: 'weather/current_weather'
         })
     }
 })
 export default class WeatherLastData extends Vue {
     public current! : any;
+    public weather!: any;
 }
 </script>

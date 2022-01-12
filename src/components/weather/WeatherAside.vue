@@ -1,5 +1,5 @@
 <template>
-    <section>
+    <section v-if="current">
         <weather-header :weather="current" />
         <weather-current :weather="current" />
         <weather-last-data :weather="current" />

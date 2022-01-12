@@ -6,8 +6,21 @@ export default {
         stations: [
             {
                 "idStation": 1,
-                "meteos": null,
-                "position": "position test"
+                "name": "Paris",
+                "latitude" : "48.856614",
+                "longitude" : 2.3522219,
+            },
+            {
+                "idStation": 2,
+                "name": "Strasbourg",
+                "latitude" : 48.5734053,
+                "longitude" : 7.7521113,
+            },
+            {
+                "idStation": 3,
+                "name": "Reims",
+                "latitude" : 49.258329,
+                "longitude" : 4.031696,
             }
         ],
         current_station: {
@@ -144,12 +157,21 @@ export default {
         }
     }),
     mutations: {
-        stations: (state: any, stations: any) => state.stations = stations
+        stations: (state: any, stations: any) => state.stations = stations,
+        current: (state: any, station: any) => state.current_station = station
     },
     actions: {
         async load_stations(context: any){
             const stations = get_stations();
             context.commit('weather/stations', stations, { root: true });
+        },
+        set_current(context: any, id: number){
+            const stations = context.getters.stations;
+            const station = stations.filter((station: any) => station.idStation === id)[0];
+            context.commit('weather/current', station, { root: true });
+        },
+        remove_current(context: any){
+            context.commit('weather/current', null, { root: true });
         }
     },
     getters: {

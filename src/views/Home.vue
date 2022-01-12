@@ -1,7 +1,7 @@
 <template>
   <section class="columns">
     <div class="column is-8">
-      <World />
+      <FranceChart />
     </div>
     <div class="column is-4 box">
       <WeatherAside />
@@ -11,11 +11,11 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import World from '@/components/charts/World.vue';
+import FranceChart from '@/components/charts/FranceChart.vue';
 import WeatherAside from '@/components/weather/WeatherAside.vue';
 @Component({
   components: {
-    World,
+    FranceChart,
     WeatherAside
   },
 })

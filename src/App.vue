@@ -11,20 +11,9 @@
 export default {
   async created(){
     this.$wait.start('loading');
-    await this.$store.dispatch('weather/load_stations');
-    this.load_stations();
+    //await this.$store.dispatch('weather/load_stations');
     setTimeout(() => this.$wait.end('loading'), 1);
-  },
-  methods: {
-    async load_stations(){
-      try {
-        const response = await this.axios.get('/api/stations');
-        console.log(response)
-      } catch(error){
-        console.log(error);
-      }
-    }
-  },
+  }
 }
 </script>
 <style lang="scss">

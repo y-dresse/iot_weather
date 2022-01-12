@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4d15db1e82f35b6fde42",
+    "revision": "97f26573d20c3a4b6ea0",
     "url": "/iot_weather/css/chunk-059a2934.dcd06a95.css"
   },
   {
@@ -8,16 +8,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/iot_weather/css/chunk-vendors.589e9d5e.css"
   },
   {
-    "revision": "48f646dcc3865b6e83eeb48c266aa8d4",
+    "revision": "b0b03b6618dedc3022d850516a0f0b90",
     "url": "/iot_weather/index.html"
   },
   {
-    "revision": "124ef6963e47e08022ea",
-    "url": "/iot_weather/js/app.08b6f4c0.js"
+    "revision": "00d2b8b579668694a62a",
+    "url": "/iot_weather/js/app.b02be3c8.js"
   },
   {
-    "revision": "4d15db1e82f35b6fde42",
-    "url": "/iot_weather/js/chunk-059a2934.2a3a8c58.js"
+    "revision": "97f26573d20c3a4b6ea0",
+    "url": "/iot_weather/js/chunk-059a2934.8dc4e994.js"
   },
   {
     "revision": "1548311bc7531d7d7b17",

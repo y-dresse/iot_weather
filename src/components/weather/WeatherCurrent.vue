@@ -1,6 +1,5 @@
 <template>
     <div class="block has-background-info">
-        <h1 class="subtitle">Donnée courante</h1>
         <div class="columns">
             <div class="column has-text-centered">
                 <h1 class="title">{{weather.temperature}}°C</h1>

@@ -3,11 +3,11 @@
         <tbody>
             <tr>
                 <td>Humidité</td>
-                <th>{{weather.humidity}}</th>
+                <th>{{weather.humidity}} %</th>
             </tr>
             <tr>
                 <td>Pression</td>
-                <th>{{weather.pressure}}</th>
+                <th>{{weather.pressure}} bar</th>
             </tr>
             <tr>
                 <td>Couverture nuageuse</td>

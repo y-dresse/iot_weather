@@ -29,7 +29,7 @@ export default {
                     nullColor: 'rgba(200, 200, 200, 0.3)',
                     showInLegend: false
                 }
-                , {
+                ,{
                     name: 'Separators',
                     type: 'mapline',
                     nullColor: '#707070',
@@ -41,6 +41,13 @@ export default {
                     name: 'Stations',
                     type:'mappoint',
                     color: 'red',
+                    point: {
+                        events: {
+                            click: (e) => {
+                                this.open_data(e)
+                            }
+                        }
+                    },
                     data: [{
                         x: 4200,
                         y: -7350,
@@ -49,7 +56,12 @@ export default {
                 }]
             }
     };
-}
+    },
+    methods: {
+        open_data(e){
+            console.log(e)
+        }
+    }
 };
 </script>
 

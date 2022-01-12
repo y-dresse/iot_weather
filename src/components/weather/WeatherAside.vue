@@ -1,8 +1,8 @@
 <template>
-    <section v-if="current">
-        <weather-header :weather="current"/>
-        <!-- <weather-current />
-        <weather-last-data /> -->
+    <section>
+        <weather-header :weather="current" />
+        <weather-current :weather="current" />
+        <weather-last-data :weather="current" />
     </section>
 </template>
 

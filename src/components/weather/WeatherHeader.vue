@@ -1,7 +1,7 @@
 <template>
     <nav class="level mx-3 mt-3">
         <div class="level-left">
-            <h1 class="title">{{weather.name}}</h1>
+            <h1 class="title">{{weather.nom}}</h1>
         </div>
         <div class="level-right">
             <b-tooltip label="Fermer le menu" position="is-left">

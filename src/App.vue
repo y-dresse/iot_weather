@@ -11,7 +11,7 @@
 export default {
   async created(){
     this.$wait.start('loading');
-    //await this.$store.dispatch('weather/load_stations');
+    await this.$store.dispatch('weather/load_stations');
     setTimeout(() => this.$wait.end('loading'), 1);
   }
 }

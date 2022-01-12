@@ -66,7 +66,7 @@ export default class FranceChart extends Vue {
             point: {
                 events: {
                     click: (event: any) => {
-                        this.$store.dispatch('weather/set_current', event.point.idStation)
+                        this.$store.dispatch('weather/load_weather_info', event.point.idStation)
                     }
                 }
             },

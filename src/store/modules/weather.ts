@@ -1,4 +1,4 @@
-import { get_stations } from "@/services/weather.service"
+import { get_stations, get_weather_info } from "@/services/weather.service"
 
 export default {
     namespaced: true,
@@ -162,8 +162,12 @@ export default {
     },
     actions: {
         async load_stations(context: any){
-            const stations = get_stations();
+            const stations = await get_stations();
             context.commit('weather/stations', stations, { root: true });
+        },
+        async load_weather_info(context: any, id: number){
+            const station = await get_weather_info(id)
+            context.commit('weather/current', station, { root : true });
         },
         set_current(context: any, id: number){
             const stations = context.getters.stations;

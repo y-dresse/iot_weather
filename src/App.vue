@@ -2,7 +2,7 @@
   <div v-if="$wait.is('loading')">
     <b-progress type="is-success" :value="$wait.percent('loading')" show-value></b-progress>
   </div>
-  <div v-else>
+  <div id="app" v-else>
     <router-view/>
   </div>
 </template>
@@ -16,5 +16,13 @@ export default {
   }
 }
 </script>
-<style lang="scss">
+
+<style>
+  #app { 
+    margin:0; 
+    padding:0; 
+    box-sizing:border-box; 
+    height: 100vh; 
+    overflow: hidden;
+  }
 </style>

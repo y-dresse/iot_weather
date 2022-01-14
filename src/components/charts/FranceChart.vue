@@ -60,7 +60,7 @@ export default class FranceChart extends Vue {
             showInLegend: false,
             states: {
                 hover: {
-                    color: '#BADA55'
+                        enabled: false
                 }
             },
             point: {

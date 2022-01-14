@@ -36,7 +36,8 @@ export default {
             context.commit('weather/stations', stations, { root: true });
         },
         async load_weather_info(context: any, id: number){
-            const station = await get_weather_info(id)
+            const station = await get_weather_info(id);
+            station.meteos.reverse();
             context.commit('weather/current', station, { root : true });
         },
         set_current(context: any, id: number){

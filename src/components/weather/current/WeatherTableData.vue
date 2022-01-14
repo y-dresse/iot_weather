@@ -2,39 +2,31 @@
     <table class="table is-narrow is-fullwidth" style="background: none; border: none;">
         <tbody>
             <tr>
-                <td>Humidité</td>
+                <td>
+                    <i class="wi wi-humidity"></i>
+                    Humidité</td>
                 <th>{{weather.humidity}} %</th>
             </tr>
             <tr>
-                <td>Pression</td>
-                <th>{{weather.pressure}} bar</th>
+                <td>
+                    <img src="https://img.icons8.com/metro/16/000000/atmospheric-pressure.png"/>
+                    Pression</td>
+                <th>{{weather.pressure}} Pa</th>
             </tr>
             <tr>
-                <td>Couverture nuageuse</td>
+                <td>
+                    <i class="wi wi-cloud"></i>
+                    Couverture nuageuse</td>
                 <th>{{weather.cloudCoverage}}</th>
             </tr>
             <tr>
-                <td>Altitude des nuages</td>
-                <th>{{weather.cloudAltitude}}</th>
+                <td><i class="wi wi-smog"></i>Altitude des nuages</td>
+                <th>{{weather.cloudAltitude}} m</th>
             </tr>
             <tr>
-                <td>Précipitation</td>
-                <th>{{weather.precipitation}}</th>
-            </tr>
-            <tr>
-                <td>Direction du vent</td>
-                <th>{{weather.windDirection}}</th>
-            </tr>
-            <tr>
-                <td>Vitesse du vent</td>
-                <th>{{weather.windSpeed}}</th>
-            </tr>
-            <tr>
-                <td>Degré du vent</td>
-                <th>{{weather.windDegree}}</th>
-            </tr>
-            <tr>
-                <td>Indice UV</td>
+                <td>
+                    <b-icon size="is-small" icon="sun-wireless" pack="mdi"></b-icon>
+                    Indice UV</td>
                 <th>{{weather.uv}}</th>
             </tr>
         </tbody>

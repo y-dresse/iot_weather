@@ -1,9 +1,9 @@
 <template>
   <section class="columns">
-    <div class="column is-8">
+    <div class="column">
       <FranceChart />
     </div>
-    <div class="column is-4 box">
+    <div class="column is-4">
       <WeatherAside />
     </div>
   </section>

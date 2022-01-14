@@ -12,7 +12,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/iot_weather/css/chunk-vendors.589e9d5e.css"
   },
   {
-    "revision": "0ce31f2ba3dec33117ef1a9acd219b1f",
+    "revision": "220eaf260ffcc9aeebd389d29340ac9b",
     "url": "/iot_weather/index.html"
   },
   {

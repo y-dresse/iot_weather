@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/iot_weather/precache-manifest.1945c5f45d395eeed83f5f67f2cf4de8.js"
+  "/iot_weather/precache-manifest.2c14df76c1a1f493d9a7c15805aac69e.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "iot_weather"});

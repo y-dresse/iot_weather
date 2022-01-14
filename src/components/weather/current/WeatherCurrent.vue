@@ -11,7 +11,7 @@
                 </h1>
 
                 <h1 class="subtitle mt-2">
-                    <i :class="getWindIcon()"></i> 
+                    
                     -
                     {{weather.windSpeed}}km/h
                     -
@@ -63,14 +63,13 @@ export default class WeatherCurrent extends Vue {
         const hour = moment(this.weather.currentTime).hour();
         let icon = "wi wi-"
         const rain =  this.weather.precipitation  ? "rain" : null
-        const day = hour > 18 && hour < 7 ? "night" : "day";
+        const day = hour > 18 || hour < 7 ? "night" : "day";
 
         if(rain)
             return icon + day + "-" + rain
         else{
-            return day === "night" ? icon + day + -"clear" : icon + day + "-sunny"
+            return day === "night" ? icon + day + "-clear" : icon + day + "-sunny"
         }
-        return icon;
     }
 }
 </script>

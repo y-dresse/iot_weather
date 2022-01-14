@@ -4,10 +4,10 @@
         <div class="columns history-scroll" style="overflow-x: scroll; scrollbar-width: thin">
             <div class="column is-2 has-text-centered mx-1 box"  v-for="(weather, index) in current.meteos" :key="index">
                 <p>{{convertCurrentTime(weather.currentTime)}}</p>
-                <p class="is-size-4"><i  :class="getWeatherIcon()"></i></p>
+                <p class="is-size-4"><i  :class="getWeatherIcon(weather)"></i></p>
                 <p>{{weather.temperature}}<i class="wi wi-celsius"></i></p>
                 <p><i class="is-size-7 wi wi-fw wi-humidity"></i>{{weather.humidity}} %</p>
-                <p>{{weather.windSpeed}} km/h <i :class="getWindDirection()"></i></p>
+                <p>{{weather.windSpeed}} km/h <i :class="getWindDirection(weather)"></i></p>
             </div>
         </div>
     </div>
@@ -22,7 +22,6 @@ import moment from 'moment';
     computed: {
         ...mapGetters({
             current: 'weather/current_station',
-            weather: 'weather/current_weather'
         })
     },
     methods: {
@@ -35,22 +34,21 @@ export default class WeatherHistory extends Vue {
     public current! : any;
     public weather!: any;
 
-    getWeatherIcon(){
-        const hour = moment(this.weather.currentTime).hour();
+    getWeatherIcon(weather: any){
+        const hour = moment(weather.currentTime).hour();
         let icon = "wi wi-"
-        const rain =  this.weather.precipitation  ? "rain" : null
-        const day = hour > 18 && hour < 7 ? "night" : "day";
+        const rain =  weather.precipitation  ? "rain" : null
+        const day = hour > 18 || hour < 7 ? "night" : "day";
 
         if(rain)
             return icon + day + "-" + rain
         else{
-            return day === "night" ? icon + day + -"clear" : icon + day + "-sunny"
+            return day === "night" ? icon + day + "-clear" : icon + day + "-sunny"
         }
-        return icon;
     }
 
-    getWindIcon(){
-        const speed = this.weather.windSpeed;
+    getWindIcon(weather: any){
+        const speed = weather.windSpeed;
         let icon = "wi wi-wind-beaufort-"
         const max_speed = [1, 5, 11, 19, 28, 38, 49, 61, 74, 88, 102, 107, 1000]
         for(let i = 0; i < max_speed.length; i++) 
@@ -59,8 +57,8 @@ export default class WeatherHistory extends Vue {
             }
     }
 
-    getWindDirection(){
-        const direction = this.weather.windDirection;
+    getWindDirection(weather: any){
+        const direction = weather.windDirection;
         return "wi wi-wind wi-from-" + direction.toLowerCase()
     }
 }
